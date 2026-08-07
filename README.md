@@ -1,2 +1,21 @@
-# python-basics
-My path of learning Python and Data Science 
+#  Python Fundamentals for Data Science
+
+Welcome to my learning repository! Here I document my progress, practice notebooks, and code snippets as I build a foundation in **Python** for **Data Science**.
+
+---
+
+##  Practice Notebooks
+
+### 1. [`01_python_basics.ipynb`](./01_python_basics.ipynb)
+* **Topics covered:**
+  * Working with Python lists (`list`) and adding elements via `.append()`
+  * Iterating through sequences using `for` loops
+  * Filtering numerical data with conditional logic (`if` statements)
+
+---
+
+##  Current Roadmap
+- [x] Python Data Structures & Loops
+- [ ] Functions & Modules
+- [ ] Data Analysis with `Pandas` & `NumPy`
+- [ ] Data Visualization with `Matplotlib` / `Seaborn`
