@@ -1,0 +1,34 @@
+# Module 03: Python Functions and Data Cleaning
+
+# Overview
+This module demonstrates how to write reusable custom functions in Python (`def`) to clean and standardize "dirty" string datasets. Automating text processing with custom functions ensures code reusability and enforces the **DRY** (*Don't Repeat Yourself*) principle in Data Science.
+
+# Key Concepts Covered
+* **Function Definition (`def` & `return`):** Modularizing data cleaning logic for individual strings.
+* **String Operations:**
+  * `.strip()` — Removes unwanted leading and trailing whitespaces.
+  * `.capitalize()` — Standardizes text casing (capitalizes the first letter and lowercases the rest).
+* **Iterative Data Processing:** Applying a transformation function to each dataset item inside a `for` loop and storing the processed results in a new list.
+
+# Code Implementation
+
+```python
+# 1. Raw dirty dataset
+raw_names = ["  iysa ", "  ALICE", "bob   ", "   diana  "]
+
+# 2. Function declaration for cleaning a single string
+def format_name(name):
+    cleaned = name.strip().capitalize()
+    return cleaned
+
+# 3. Empty list to store processed names
+clean_names = []
+
+# 4. Iterating over raw names and applying the function
+for raw_name in raw_names:
+    formatted = format_name(raw_name)  # Pass dirty name into the function
+    clean_names.append(formatted)      # Append clean result to the list
+
+# 5. Output the cleaned dataset
+print("Original names:", raw_names)
+print("clean_names:", clean_names)
