@@ -1,0 +1,32 @@
+# Module 06: Advanced Functions, Default Arguments & Lambdas
+
+## Overview
+This module explores advanced functional programming features in Python. It demonstrates how to write clean, maintainable code using default arguments, anonymous functions (`lambda`), and built-in higher-order functions (`filter` and `map`) for streamlined data transformation without verbose loops.
+
+##  Key Concepts Covered
+* **Default Arguments (`param=default`):** Setting fallback values for function parameters to streamline function calls while preserving customization options.
+* **Lambda Functions (`lambda x: expression`):** Writing concise, one-line anonymous functions for lightweight operations.
+* **Filtering Data (`filter()`):** Extracting specific dataset items based on boolean logic evaluated via lambda expressions.
+* **Bulk Processing (`map()`):** Applying transformation functions across entire collections efficiently.
+
+##  Code Implementation
+
+```python
+# 1. Function with a default argument
+def calculate_final_score(score, bonus=5):
+    """Adds a bonus value to the base score (capped at 100)."""
+    final_score = score + bonus
+    return min(final_score, 100)
+
+# 2. Dataset
+raw_scores = [70, 85, 40, 90, 78, 95]
+
+# 3. Filtering using Lambda
+low_scores = list(filter(lambda s: s < 80, raw_scores))
+
+# 4. Bulk transformation using Map & Lambda
+processed_scores = list(map(lambda s: calculate_final_score(s), raw_scores))
+
+print("Raw Dataset:", raw_scores)
+print("Low Scores (< 80):", low_scores)
+print("Processed Scores (with bonus):", processed_scores)
