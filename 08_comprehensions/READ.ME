@@ -1,0 +1,30 @@
+# Module 08: List and Dictionary Comprehensions
+
+##  Overview
+This module demonstrates Pythonic data transformation techniques using list and dictionary comprehensions. Comprehensions provide a concise, readable, and computationally efficient way to map, filter, and restructure datasets without writing verbose multi-line `for` loops.
+
+##  Key Concepts Covered
+* **List Comprehension (`[expression for item in iterable if condition]`):** Constructing new filtered lists by evaluating expressions on elements inline.
+* **Dictionary Comprehension (`{key: value for item in iterable}`):** Building key-value mappings dynamically with inline conditional logic (`if/else`).
+* **Data Transformation:** Combining filtering, string manipulation, and categorization in single-line statements.
+
+##  Code Implementation
+
+```python
+# Raw dataset
+students_data = [
+    ("Iysa", 85),
+    ("Alice", 92),
+    ("Bob", 65),
+    ("Diana", 78),
+    ("Ethan", 88)
+]
+
+# 1. List comprehension with filtering and uppercase mapping
+top_students = [name.upper() for name, score in students_data if score >= 80]
+
+# 2. Dictionary comprehension with inline ternary status mapping
+status_dict = {name: ("Pass" if score >= 70 else "Fail") for name, score in students_data}
+
+print("Top Students:", top_students)
+print("Evaluated Statuses:", status_dict)
