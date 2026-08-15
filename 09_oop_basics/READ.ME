@@ -1,0 +1,35 @@
+# Module 09: Object-Oriented Programming (OOP) Basics
+
+##  Overview
+This module introduces Object-Oriented Programming (OOP) principles in Python. It demonstrates how to construct custom classes to encapsulate state (attributes) and behavior (methods), enabling the design of modular, reusable, and maintainable software architectures.
+
+##  Key Concepts Covered
+* **Class Definition & Instantiation:** Creating blueprint definitions (`class`) and instantiating individual objects (`instances`).
+* **Constructor Method (`__init__`):** Initializing instance attributes dynamically upon object creation.
+* **Instance Methods:** Defining functions within classes that operate on `self` data structures.
+* **Magic Methods (`__str__`):** Customizing string representations for objects to enhance debugging and readable printing.
+
+##  Code Implementation
+
+```python
+class Student:
+    def __init__(self, name, city):
+        self.name = name
+        self.city = city
+        self.scores = []
+
+    def add_score(self, score):
+        self.scores.append(score)
+
+    def get_average(self):
+        return sum(self.scores) / len(self.scores) if self.scores else 0.0
+
+    def __str__(self):
+        return f"Student: {self.name} | Avg Score: {self.get_average():.1f}"
+
+# Object instantiation and usage
+student = Student("Iysa", "Tashkent")
+student.add_score(95)
+student.add_score(88)
+
+print(student)
